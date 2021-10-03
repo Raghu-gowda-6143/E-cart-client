@@ -37,7 +37,7 @@ const NavBar = () => {
                 <IconButton style={{ borderRadius: '0', padding: '0 5px', color: 'white' }}>
 
                     <Box className={classes.container}>
-                        <Typography className={classes.text__2}>Home Appliances</Typography>
+                        <Typography className={classes.text__2}>Appliances</Typography>
                     </Box>
                 </IconButton>
 

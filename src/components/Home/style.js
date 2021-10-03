@@ -60,15 +60,20 @@ export default makeStyles((theme) => ({
         fontSize: 13
     },
     wrapper: {
-        padding: '25px 15px'
+        padding: '25px 15px',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '-20px'
+        }
     },
 
     component__4: {
+        width: '100%',
+        height: '4%',
         background: '#06d4cf',
         color: 'white',
         display: 'flex',
         justifyContent: 'space-around',
-        marginTop: '-1px',
+        marginTop: '-10px',
         overflowX: 'overlay',
 
     },
@@ -93,7 +98,7 @@ export default makeStyles((theme) => ({
     help: {
         [theme.breakpoints.down('md')]: {
             objectFit: 'cover',
-            height: 120
+            height: 150
         }
     }
 
