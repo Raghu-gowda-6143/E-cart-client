@@ -41,22 +41,35 @@ export default makeStyles((theme) => ({
         borderTop: '4px solid #f0f0f0',
         display: 'flex',
         marginLeft: 'auto',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: '100%',
         }
     },
     leftComponent__2: {
         margin: 20,
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        [theme.breakpoints.down('md')]: {
+            margin: 5,
+        }
     },
     image: {
         height: 250,
-        width: 250
+        width: 250,
+        [theme.breakpoints.down('md')]: {
+            width: 150,
+            height: 150
+        }
     },
     mid: {
         marginLeft: 50,
-        marginTop: 35
+        marginTop: 35,
+        [theme.breakpoints.down('md')]: {
+            marginLeft: 30,
+            marginTop: 15,
+
+
+        }
     },
     greyTextColor__1: {
         color: '#878787'

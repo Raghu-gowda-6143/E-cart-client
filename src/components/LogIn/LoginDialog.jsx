@@ -33,7 +33,7 @@ const accountInitialValues = {
     }
 }
 
-const LoginDialog = ({ open, setOpen, signIn, signUp }) => {
+const LoginDialog = ({ open, setOpen, signIn, signUp, history }) => {
     const classes = useStyle();
     const [login, setLogin] = useState(loginInitialValues);
     const [signup, setSignup] = useState(signupInitialValues);
@@ -55,8 +55,8 @@ const LoginDialog = ({ open, setOpen, signIn, signUp }) => {
     const loginUser = () => {
         try {
             signIn(login);
-
             handleClose();
+            history.push("/")
 
         } catch (error) {
             console.log(error)
@@ -64,10 +64,14 @@ const LoginDialog = ({ open, setOpen, signIn, signUp }) => {
         }
     }
 
+
+
     const signupUser = () => {
         try {
             signUp(signup);
             handleClose();
+            history.push("/")
+
 
         } catch (error) {
             console.log(error)

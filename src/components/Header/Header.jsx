@@ -29,7 +29,7 @@ const Header = () => {
     }
 
     const list = () => (
-        <Box className={classes.list__1} >
+        <Box className={classes.list__1}  >
             <List >
                 <listItem button >
                     <CustomButtons />

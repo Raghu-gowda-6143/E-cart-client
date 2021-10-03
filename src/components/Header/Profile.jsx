@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Menu, MenuItem, makeStyles, IconButton, Button } from '@material-ui/core';
+import { Typography, Menu, MenuItem, makeStyles, Button } from '@material-ui/core';
 import { signOut } from '../../redux/actions/authAction';
 
 import { connect } from 'react-redux';
@@ -40,8 +40,7 @@ const Profile = ({ signOut, history }) => {
         try {
             signOut(config);
             handleClose();
-
-
+            history.push("/")
         } catch (error) {
             console.log(error)
 

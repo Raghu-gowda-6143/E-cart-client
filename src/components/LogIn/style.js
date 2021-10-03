@@ -5,7 +5,12 @@ export default makeStyles((theme) => ({
     component: {
         height: '70vh',
         width: '40vw',
-        maxWidth: 'unset !important'
+        maxWidth: 'unset !important',
+        [theme.breakpoints.down('sm')]: {
+            width: '80vw',
+            height: '50vh'
+        }
+
     },
     image: {
         backgroundImage: `url(${'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png'})`,

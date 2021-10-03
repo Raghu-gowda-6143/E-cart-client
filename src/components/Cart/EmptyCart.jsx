@@ -8,7 +8,12 @@ const useStyle = makeStyles((theme) => ({
         width: '80%%',
         height: '65vh',
         background: '#fff',
-        margin: '80px 140px'
+        margin: '80px 140px',
+        [theme.breakpoints.down('sm')]: {
+            width: '90vw',
+            height: '45vh',
+            margin: '80px auto',
+        }
     },
     image: {
         width: '15%'

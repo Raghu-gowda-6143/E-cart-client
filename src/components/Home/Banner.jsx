@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyle = makeStyles(theme => ({
     container: {
+        width: '100%',
     },
     image: {
         width: '100%',
