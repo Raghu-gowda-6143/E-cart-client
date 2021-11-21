@@ -31,7 +31,6 @@ const MultiSlide = ({ data, title }) => {
         <Box className={classes.component__3}>
             <Box className={classes.deal}>
                 <Typography className={classes.dealText}>{title}</Typography>
-
                 <Button variant="contained" className={classes.button}>View All</Button>
             </Box>
             <Divider />
@@ -81,7 +80,6 @@ const MultiSlide = ({ data, title }) => {
                                         </Typography>
                                     </Box>
                                 </Link>
-
                             )
                         }
 

@@ -48,7 +48,6 @@ const Profile = ({ signOut, history }) => {
     }
 
 
-
     return (
         <>
             <Link onClick={handleClick} style={{ marginTop: 8 }} >
@@ -67,7 +66,7 @@ const Profile = ({ signOut, history }) => {
                     handleClose();
                     logout();
                 }}>
-                    <Button style={{ backgroundColor: '#FB641B', color: 'white' }} >
+                    <Button style={{width:"120px", backgroundColor: '#FB641B', color: 'white' }} >
                         logout
                     </Button>
                 </MenuItem>
@@ -77,8 +76,4 @@ const Profile = ({ signOut, history }) => {
 };
 
 
-const mapStateToPros = state => {
-    return { name: state.auth.name }
-}
-
-export default connect(mapStateToPros, { signOut })(Profile);
+export default connect(null, { signOut })(Profile);

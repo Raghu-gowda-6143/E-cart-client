@@ -1,19 +1,18 @@
-import { Box, Button, Grid } from '@material-ui/core';
+import { Box,  Grid } from '@material-ui/core';
 import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { addToCart, removeFromCart, getCartItems } from '../../redux/actions/privateAction';
 import TotalView from './TotalView';
-import { payment } from '../../services/api';
+import Pay from '../CheckOut/Pay'
 import useStyle from './style';
 
 
-const Cart = ({ cartItems, removeFromCart, getCartItems }) => {
+const Cart = ({ cartItems, removeFromCart, getCartItems, product }) => {
     const classes = useStyle();
 
-
-
+    console.log(product);
 
     useEffect(() => {
         const config = {
@@ -38,17 +37,6 @@ const Cart = ({ cartItems, removeFromCart, getCartItems }) => {
         removeFromCart(id, config);
     }
 
-    //console.log(cartItems)
-
-    // const data = {
-    //     name: cartItems.name,
-    //     price: cartItems.products[0].price.cost
-    // }
-
-    // const buyNow = async () => {
-    //     let response = await payment(data, config);
-
-    // }
 
     return (
         <>
@@ -69,9 +57,9 @@ const Cart = ({ cartItems, removeFromCart, getCartItems }) => {
 
                         }
                         <Box className={classes.bottom}>
-                            <Button
-
-                                variant="contained" className={classes.placeOrder}>Place Order</Button>
+                            <div style={{marginLeft:"50%", width:"100%"}}>
+                                <Pay product={product} buttonName="Place Order"/>
+                            </div>
                         </Box>
                     </Grid>
                     <Grid item lg={3} md={3} sm={12} xs={12}>
@@ -86,7 +74,9 @@ const Cart = ({ cartItems, removeFromCart, getCartItems }) => {
 }
 
 const mapStateToProps = state => {
-    return { cartItems: state.getCart.cartItems }
+    return { 
+        cartItems: state.getCart.cartItems ,
+        product: state.product.product}
 }
 
 

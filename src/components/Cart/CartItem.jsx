@@ -3,7 +3,7 @@ import { Delete } from "@material-ui/icons";
 //import { addEllipsis } from '../../utils/util';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import GroupButton from './GroupButton';
+//import GroupButton from './GroupButton';
 import useStyle from './style';
 
 
@@ -20,7 +20,6 @@ const CartItem = ({ item, removeItemFromCart }) => {
                 to={`product/${item[0].productId}`} style={{ textDecoration: 'none' }}>
                 <Box className={classes.leftComponent__2}>
                     <img src={item[0].productImg} alt="" className={classes.image} />
-                    <GroupButton />
                 </Box>
 
             </Link>
@@ -44,7 +43,7 @@ const CartItem = ({ item, removeItemFromCart }) => {
                         {item[0].price.discount} off
                     </span>
                 </Typography>
-                <Button className={classes.remove} onClick={() => removeItemFromCart(item[0]._id)}><Delete color="light" /></Button>
+                    <Button className={classes.remove} onClick={() => removeItemFromCart(item[0]._id)}><Delete color="light" /></Button>
             </Box>
         </Card>
     )

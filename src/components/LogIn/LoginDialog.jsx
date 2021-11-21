@@ -52,9 +52,9 @@ const LoginDialog = ({ open, setOpen, signIn, signUp, history }) => {
         setSignup({ ...signup, [e.target.name]: e.target.value });
     }
 
-    const loginUser = () => {
+    const loginUser = async() => {
         try {
-            signIn(login);
+            await signIn(login);
             handleClose();
             history.push("/")
 
@@ -64,23 +64,17 @@ const LoginDialog = ({ open, setOpen, signIn, signUp, history }) => {
         }
     }
 
-
-
-    const signupUser = () => {
+    const signupUser = async() => {
         try {
-            signUp(signup);
+            await signUp(signup);
             handleClose();
             history.push("/")
 
-
         } catch (error) {
             console.log(error)
-
         }
 
     };
-
-
 
     const toggleSignup = () => {
         toggleAccount(accountInitialValues.signup);
@@ -116,7 +110,7 @@ const LoginDialog = ({ open, setOpen, signIn, signUp, history }) => {
 
                                 <Button
                                     onClick={() => toggleSignup()}
-                                    className={classes.requestbtn}>
+                                    className={classes.loginRequestbtn}>
                                     New to E cart? Create an account
                                 </Button>
 
@@ -144,13 +138,13 @@ const LoginDialog = ({ open, setOpen, signIn, signUp, history }) => {
 
                                 </Grid>
                                 <Button
-                                    className={classes.loginbtn}
+                                    className={classes.signinbtn}
                                     onClick={() => signupUser()} >
                                     SIGN UP
                                 </Button>
                                 <Button
                                     onClick={() => toggleSignIn()}
-                                    className={classes.requestbtn}>
+                                    className={classes.signinRequestbtn}>
                                     Already have an account? LogIn
                                 </Button>
                             </Box>

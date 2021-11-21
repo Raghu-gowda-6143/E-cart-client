@@ -23,15 +23,6 @@ const Product = ({ history, match, getProductById, product }) => {
     }, [product, match, getProductById]);
 
 
-    //console.log(product);
-
-
-    // useEffect(() => {
-    //     getProductById(id);
-    // }, []);
-
-
-
     return (
         <Box className={classes.component}>
             <Box></Box>
@@ -41,8 +32,7 @@ const Product = ({ history, match, getProductById, product }) => {
                         <ActionItem product={product} />
                     </Grid>
                     <Grid item lg={8} md={8} sm={8} xs={12} className={classes.rightContainer}>
-                        <Typography>{product.title.longTitle}
-                        </Typography>
+                        <Typography style={{marginLeft:"17px"}}>{product.title.longTitle}</Typography>
                         <Typography>
                             <span className={classes.price}>₹{product.price.cost}</span>&nbsp;&nbsp;&nbsp;
                             <span className={classes.greyTextColor}><strike>₹{product.price.mrp}</strike></span>&nbsp;&nbsp;&nbsp;

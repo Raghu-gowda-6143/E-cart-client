@@ -16,6 +16,22 @@ const useStyle = makeStyles(theme => ({
     }
 }));
 
+const responsive = {
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5,
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+    }
+};
+
+
 const bannerData = [
     'https://rukminim1.flixcart.com/flap/3376/560/image/d117a62eb5fbb8e1.jpg?q=50',
     'https://rukminim1.flixcart.com/flap/3376/560/image/e9d9cd1b59b24cb0.jpeg?q=50',
@@ -30,17 +46,21 @@ const Banner = () => {
             autoPlay={true}
             animation="slide"
             indicators={false}
+            responsive={responsive}
             navButtonsAlwaysVisible={true}
             cycleNavigation={true}
             className={classes.container}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
             StylesProvider
             navButtonsProps={{
                 style: {
-                    color: 'white',
-                    backgroundColor: 'transparent',
-                    borderRadius: 0,
+                    color: 'black',
+                    backgroundColor: '#fff',
+                    borderRadius: "0px 5px 5px 0",
                     margin: 0,
+                    marginTop:-20,
                     width: 50,
+                    height:100
                 }
             }}
         >

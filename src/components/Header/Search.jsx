@@ -38,7 +38,7 @@ const Search = ({ getProducts, products }) => {
         onChange={(e) => getText(e.target.value)}
       />
       <IconButton className={classes.searchIcon}>
-        <SearchIcon style={{ color: '#0bb3b0' }} />
+        <SearchIcon style={{ color: '#0bb3b0'}} />
       </IconButton>
       {
         text &&

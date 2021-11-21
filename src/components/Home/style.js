@@ -69,11 +69,10 @@ export default makeStyles((theme) => ({
     component__4: {
         width: '100%',
         height: '4%',
-        background: '#06d4cf',
-        color: 'white',
+        background: '#fff',
+        color: '#000000',
         display: 'flex',
         justifyContent: 'space-around',
-        marginTop: '-10px',
         overflowX: 'overlay',
 
 
@@ -83,11 +82,14 @@ export default makeStyles((theme) => ({
         textAlign: 'center'
     },
     text__2: {
+        color: '#000000',
         fontSize: 14,
         fontWeight: 600,
         fontFamily: 'inherit',
-        cursor: 'pointer'
+        cursor: 'pointer',
+
     },
+
     wrapper__2: {
         display: 'flex',
         marginTop: 20,

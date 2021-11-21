@@ -9,6 +9,9 @@ import Mobile from './components/Pages/Mobile';
 import Electronics from './components/Pages/Electronics';
 import Fashion from './components/Pages/Fashion';
 import Appliances from './components/Pages/Appliances';
+import Success from './components/CheckOut/Success';
+import Cancelled from './components/CheckOut/Cancelled';
+
 import history from './history';
 
 import useStyles from './style';
@@ -16,28 +19,54 @@ import useStyles from './style';
 
 const App = () => {
 
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <TemplateProvider>
-      <Router history={history}>
-        <div className={classes.root}>
-          <Header />
-          <section className={classes.section}>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/cart" component={Cart} />
-              <Route exact path="/product/:id" component={Product} />
-              <Route exact path="/mobiles" component={Mobile} />
-              <Route exact path="/electronics" component={Electronics} />
-              <Route exact path="/fashion" component={Fashion} />
-              <Route exact path="/appliances" component={Appliances} />
-            </Switch>
-          </section>
-        </div>
-      </Router>
-    </TemplateProvider>
-  );
+    return ( <
+        TemplateProvider >
+        <
+        Router history = { history } >
+        <
+        div className = { classes.root } >
+        <
+        Header / >
+        <
+        section className = { classes.section } >
+        <
+        Switch >
+        <
+        Route exact path = "/"
+        component = { Home }
+        />  <
+        Route exact path = "/cart"
+        component = { Cart }
+        /> <
+        Route exact path = "/product/:id"
+        component = { Product }
+        /> <
+        Route exact path = "/mobiles"
+        component = { Mobile }
+        />  <
+        Route exact path = "/electronics"
+        component = { Electronics }
+        />  <
+        Route exact path = "/fashion"
+        component = { Fashion }
+        />  <
+        Route exact path = "/success"
+        component = { Success }
+        />  <
+        Route exact path = "/cancelled"
+        component = { Cancelled }
+        /> <
+        Route exact path = "/appliances"
+        component = { Appliances }
+        /> < /
+        Switch > <
+        /section> < /
+        div > <
+        /Router> < /
+        TemplateProvider >
+    );
 }
 
 export default App;

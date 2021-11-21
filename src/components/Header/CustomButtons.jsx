@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Badge, Button, IconButton } from '@material-ui/core';
+import { Box, Typography, Badge, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ShoppingCart } from '@material-ui/icons';
 import { connect } from 'react-redux';
@@ -11,8 +11,6 @@ import useStyle from './style';
 const CustomButtons = ({ cartItems }) => {
     const classes = useStyle();
     const [open, setOpen] = useState(false);
-
-
 
 
     const openDialog = () => {

@@ -40,23 +40,43 @@ export default makeStyles((theme) => ({
         background: '#3f71f5',
         color: '#fff',
         height: 50,
-        borderRadius: 2
+        borderRadius: 2,
+        width: "100%",
+        marginTop: "20%"
     },
-    requestbtn: {
+    loginRequestbtn: {
         textTransform: 'none',
         background: '#fff',
         color: '#2874f0',
         height: 50,
+        width: "100%",
+        boxShadow: '0 2px 4px 0 rgb(0 0 0 / 20%)'
+    },
+    signinbtn: {
+        textTransform: 'none',
+        background: '#3f71f5',
+        color: '#fff',
+        height: 50,
         borderRadius: 2,
+        width: "100%",
+        marginTop: "10%"
+
+    },
+    signinRequestbtn: {
+        textTransform: 'none',
+        background: '#fff',
+        color: '#2874f0',
+        height: 50,
+        width: "100%",
         boxShadow: '0 2px 4px 0 rgb(0 0 0 / 20%)'
     },
 
     input__1: {
         width: '100%',
-        marginTop: 20
+        marginTop: 45
     },
     input__2: {
-        marginTop: 20
+        marginTop: 30
     },
     text: {
         color: '#878787',

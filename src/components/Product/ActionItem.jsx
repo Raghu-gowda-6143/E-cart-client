@@ -1,11 +1,11 @@
 import { Button, Box } from '@material-ui/core';
-import { ShoppingCart as Cart, FlashOn as Flash } from '@material-ui/icons';
+import { ShoppingCart as Cart,} from '@material-ui/icons';
 import clsx from 'clsx';
 import { useHistory } from 'react-router-dom';
 import { addToCart } from '../../redux/actions/privateAction';
 import { connect } from 'react-redux';
 import useStyle from './style';
-import { payment } from '../../services/api';
+import Pay from '../CheckOut/Pay'
 
 
 
@@ -16,6 +16,7 @@ const ActionItem = ({ product, addToCart }) => {
     const { id, price, url, title } = product;
 
     const quantity = 1;
+    
 
 
 
@@ -34,15 +35,8 @@ const ActionItem = ({ product, addToCart }) => {
         price
     }
 
-    const data = {
-        name: title.shortTitle,
-        price: price.cost
-    }
-    const buyNow = () => {
-        payment(data, config);
-
-    }
-
+    
+    
     const addItemToCart = () => {
         addToCart(values, config);
         history.push('/cart');
@@ -59,16 +53,10 @@ const ActionItem = ({ product, addToCart }) => {
                 <Cart style={{ marginRight: '4px' }} />
                 Add to Cart
             </Button>
-            <Button
-                onClick={() => buyNow()}
-                fullWidth
-                className={clsx(classes.button, classes.buyNow)} variant="contained">
-                <Flash />
-                Buy Now
-            </Button>
+           <Pay product={product} buttonName="Buy Now" />
+            
         </Box>
     )
 }
-
 
 export default connect(null, { addToCart })(ActionItem);

@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     },
     container: {
         background: '#FFFFFF',
-        // margin: '0 80px',
+        //margin: '0 80px',
         display: 'flex',
         [theme.breakpoints.down('md')]: {
             margin: 0
@@ -17,11 +17,13 @@ export default makeStyles((theme) => ({
     rightContainer: {
         marginTop: 50,
         '& > *': {
-            marginTop: 10
+            marginTop: 10,
+
         }
     },
     price: {
-        fontSize: 28
+        fontSize: 28,
+        marginLeft: "15px"
     },
     smallText: {
         fontSize: 14,

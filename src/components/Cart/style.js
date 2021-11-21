@@ -47,8 +47,8 @@ export default makeStyles((theme) => ({
         flexDirection: 'column'
     },
     image: {
-        height: 110,
-        width: 110
+        height: "100%",
+        width: "150px"
     },
     mid: {
         margin: 20
@@ -65,9 +65,10 @@ export default makeStyles((theme) => ({
     },
     remove: {
         marginTop: 15,
+        backgroundColor: "#F2F2F1",
         '&:hover': {
-            backgroundColor: 'red',
-            color: 'white'
+            backgroundColor: '#fc4103',
+            color: '#F2F2F2'
         }
     },
 
@@ -94,5 +95,8 @@ export default makeStyles((theme) => ({
         padding: '20px 0',
         borderBottom: '1px dashed #e0e0e0'
     },
+    buttons: {
+        display: "flex",
+    }
 
 }))

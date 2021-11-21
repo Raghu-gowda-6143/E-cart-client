@@ -3,10 +3,11 @@ import { ButtonGroup, Button, makeStyles } from "@material-ui/core";
 
 const useStyle = makeStyles({
     component: {
-        marginTop: 30
+        width:"130px",
+        height:"40px"
     },
     button: {
-        borderRadius: '50%'
+        borderRadius: '50px'
     }
 })
 

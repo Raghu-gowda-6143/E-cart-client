@@ -4,16 +4,60 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
     header: {
         background: '#0bb3b0',
-        height: 55
+        width: "100vw",
+        height: 55,
+        display: "flex",
+        justifyContent: "center",
+
+        [theme.breakpoints.down('sm')]: {
+            height: 85
+        }
     },
     component: {
-        marginLeft: '12%',
-        lineHeight: 0,
-        color: '#FFFFFF',
-        textDecoration: 'none'
+        width: "100%",
+        display: "flex",
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        }
     },
+
+    logobtn: {
+        marginLeft: '12%',
+        marginRight: '1%',
+        color: '#FFFFFF',
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '25%',
+        }
+
+
+
+    },
+    mobile_component: {
+        display: "none",
+        [theme.breakpoints.down('sm')]: {
+            width: "100%",
+            height: "85px",
+            display: 'flex',
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+        }
+
+    },
+    mobile_component_inner: {
+        display: "none",
+        [theme.breakpoints.down('sm')]: {
+            width: "50vw",
+            display: 'flex',
+            flexDirection: "space around",
+            alignItems: "center"
+        }
+
+    },
+
     logo: {
-        width: 75
+        width: 75,
+
     },
     container__1: {
         display: 'flex',
@@ -28,45 +72,41 @@ export default makeStyles((theme) => ({
         marginLeft: 4
     },
     list__1: {
-        width: 250,
-    },
-    menuButton: {
-        display: 'none',
+        width: "50vw",
+        marginLeft: "20%",
         [theme.breakpoints.down('sm')]: {
-            display: 'block'
+            marginLeft: '10',
         }
     },
-    customButtons: {
-        margin: '0 5% 0 auto',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none'
-        }
-    },
+
+
     container__2: {
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
-            display: 'block'
+            justifyContent: "space-evenly"
         }
+
     },
     wrapper: {
-        margin: '0 5% 0 auto',
+        width: "30vw",
+        margin: '0 10% 0 auto',
         display: 'flex',
+        justifyContent: "space-evenly",
         '& > *': {
-            marginRight: 50,
+            marginRight: 30,
             textDecoration: 'none',
             color: '#FFFFFF',
             fontSize: 12,
             alignItems: 'center',
-            [theme.breakpoints.down('sm')]: {
-                color: '#0bb3b0',
-                alignItems: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                marginTop: 10
-            }
+
         },
         [theme.breakpoints.down('sm')]: {
-            display: 'block'
+            width: "75vw",
+            display: 'flex',
+            justifyContent: "flex-end",
+            marginRight: 'auto',
+
+
         }
     },
     login: {
@@ -79,8 +119,7 @@ export default makeStyles((theme) => ({
         height: 32,
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
-            background: '#0bb3b0',
-            color: '#FFFFFF'
+            width: "100px"
         }
     },
     search: {
@@ -88,10 +127,14 @@ export default makeStyles((theme) => ({
         marginLeft: 10,
         width: '38%',
         backgroundColor: '#fff',
-        display: 'flex'
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            width: '95%',
+        }
+
     },
     searchIcon: {
-        marginLeft: 'auto',
+        width: "50px",
         padding: 5,
         borderRadius: 1,
         display: 'flex',
@@ -107,16 +150,32 @@ export default makeStyles((theme) => ({
     inputInput: {
         paddingLeft: 20,
         width: '100%',
+        marginLeft: "10%",
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        }
 
     },
     list__2: {
         position: 'absolute',
         color: '#000',
         background: '#FFFFFF',
-        marginTop: 36
+        marginTop: 36,
+        [theme.breakpoints.down('sm')]: {
+            width: "87.5%",
+
+        }
+    },
+
+    customButtons: {
+        width: "30%",
+        marginLeft: "auto",
+        display: "flex",
+        justifyContent: "space-evenly",
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "space-between",
+        }
+
     }
-
-
-
 
 }));

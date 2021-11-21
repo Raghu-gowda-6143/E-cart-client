@@ -9,7 +9,7 @@ const ProductDetail = ({ product }) => {
 
     return (
         <>
-            <Typography>Available offers</Typography>
+            <Typography style={{marginLeft:"17px"}}>Available offers</Typography>
 
             <Table>
                 <TableBody>

@@ -12,13 +12,12 @@ import Banner from './Banner';
 const Home = ({ products }) => {
     const classes = useStyle();
 
-
     return (
         <>
             <NavBar />
-            <Banner />
 
             <Box className={classes.component__1}>
+                <Banner />
                 <MidSlide products={products} />
                 <MidSection />
 
@@ -37,6 +36,8 @@ const Home = ({ products }) => {
                 />
 
             </Box>
+
+            
         </>
     )
 }
