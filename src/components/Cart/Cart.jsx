@@ -1,7 +1,7 @@
 import { Box,  Grid } from '@material-ui/core';
 import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { addToCart, removeFromCart, getCartItems } from '../../redux/actions/privateAction';
 import TotalView from './TotalView';
@@ -12,8 +12,24 @@ import useStyle from './style';
 const Cart = ({ cartItems, removeFromCart, getCartItems, product }) => {
     const classes = useStyle();
 
-    console.log(product);
+    const [price, setPrice] = useState(0);
+    const [discount, setDiscount] = useState(0)
 
+
+    useEffect(() => {
+        const totalAmount = () => {
+            let price = 0, discount = 0;
+            //console.log(cartItems);
+            cartItems.map(item => {
+                //console.log(item.products[0].price)
+                price += item.products[0].price.mrp
+                discount += (item.products[0].price.mrp - item.products[0].price.cost)
+            })
+            setPrice(price);
+            setDiscount(discount);
+        }
+        totalAmount();
+    }, [cartItems]);
     useEffect(() => {
         const config = {
             headers: {
@@ -58,7 +74,7 @@ const Cart = ({ cartItems, removeFromCart, getCartItems, product }) => {
                         }
                         <Box className={classes.bottom}>
                             <div style={{marginLeft:"50%", width:"100%"}}>
-                                <Pay product={product} buttonName="Place Order"/>
+                                {price&& <Pay cost={price - discount + 40} buttonName="Place Order"/>}
                             </div>
                         </Box>
                     </Grid>

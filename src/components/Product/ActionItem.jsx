@@ -53,7 +53,7 @@ const ActionItem = ({ product, addToCart }) => {
                 <Cart style={{ marginRight: '4px' }} />
                 Add to Cart
             </Button>
-           <Pay product={product} buttonName="Buy Now" />
+           <Pay cost={product.price.cost} buttonName="Buy Now" />
             
         </Box>
     )

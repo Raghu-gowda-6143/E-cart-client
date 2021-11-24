@@ -43,6 +43,7 @@ export default makeStyles((theme) => ({
         marginLeft: 'auto',
         [theme.breakpoints.down('md')]: {
             width: '100%',
+
         }
     },
     leftComponent__2: {

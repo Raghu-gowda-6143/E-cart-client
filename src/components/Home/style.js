@@ -67,19 +67,22 @@ export default makeStyles((theme) => ({
     },
 
     component__4: {
-        width: '100%',
-        height: '4%',
         background: '#fff',
         color: '#000000',
         display: 'flex',
-        justifyContent: 'space-around',
+        posistion: "absolute",
+        justifyContent: 'space-between',
+        alignItems: "center",
         overflowX: 'overlay',
-
+        [theme.breakpoints.down('md')]: {
+            margin: 0
+        }
 
     },
     container: {
-        padding: '12px 8px',
-        textAlign: 'center'
+        padding: '15px 0px',
+        textAlign: 'center',
+
     },
     text__2: {
         color: '#000000',

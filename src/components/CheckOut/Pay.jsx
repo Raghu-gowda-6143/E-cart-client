@@ -7,15 +7,15 @@ import useStyle from '../Product/style';
 import {api} from '../../services/api';
 
 
-const stripeKey = process.env.REACT_APP_PUBLIC_KEY;
+const stripeKey = "pk_test_51JxSyKSBsrgnTdJQR8YLOuj0vNv82nIeF6LoCtdZFwxLZahj79Ot6qxjz0Yp25G8xiUhr3PHsTzh7OtoNmym06HW00M49YtjHJ";
 
 
-const Pay = ({product, buttonName}) => {
+const Pay = ({cost, buttonName}) => {
     const classes = useStyle();
+    
 
     const history = useHistory()
 
-    const {  price  } = product;
 
     const [stripeToken, setStipeToken]=useState(null);
 
@@ -30,7 +30,7 @@ const Pay = ({product, buttonName}) => {
             try {
                 const data = {
                     tokenId:stripeToken.id,
-                    amount:price.cost*100
+                    amount:cost*100
                 }
                 const config = {
                     headers: {
@@ -55,7 +55,7 @@ const Pay = ({product, buttonName}) => {
         };
         stripeToken && makeRequest();
 
-    },[stripeToken, price, history]);
+    },[stripeToken, cost, history]);
 
 
 
@@ -66,8 +66,8 @@ const Pay = ({product, buttonName}) => {
         name="E cart"
         billingAddress
         shippingAddress
-        description={`Your total is ${price.cost} Rs`}
-        amount={price.cost*100}
+        description={cost&&`Your total is Rs ${cost}`}
+        amount={cost&&cost*100}
         token={onToken}
         currency="inr"
         stripeKey={stripeKey}

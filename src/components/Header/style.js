@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
         }
     },
     component: {
-        width: "100%",
+        width: "100vw",
         display: "flex",
         [theme.breakpoints.down('sm')]: {
             display: 'none',
@@ -22,12 +22,18 @@ export default makeStyles((theme) => ({
     },
 
     logobtn: {
+        width: "15%",
         marginLeft: '12%',
         marginRight: '1%',
+        display: 'flex',
         color: '#FFFFFF',
         textDecoration: 'none',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '25%',
+            width: "50%",
+            display: 'flex',
+            justifyContent: "flex-end",
+
+
         }
 
 
@@ -47,10 +53,10 @@ export default makeStyles((theme) => ({
     mobile_component_inner: {
         display: "none",
         [theme.breakpoints.down('sm')]: {
-            width: "50vw",
+            width: "50%",
             display: 'flex',
-            flexDirection: "space around",
-            alignItems: "center"
+            alignItems: "center",
+
         }
 
     },
@@ -98,13 +104,17 @@ export default makeStyles((theme) => ({
             color: '#FFFFFF',
             fontSize: 12,
             alignItems: 'center',
+            [theme.breakpoints.down('sm')]: {
+                marginRight: 15,
+
+            }
 
         },
         [theme.breakpoints.down('sm')]: {
-            width: "75vw",
+            width: "50vw",
             display: 'flex',
             justifyContent: "flex-end",
-            marginRight: 'auto',
+            marginLeft: 'auto',
 
 
         }
@@ -129,7 +139,9 @@ export default makeStyles((theme) => ({
         backgroundColor: '#fff',
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
-            width: '95%',
+            width: '100%',
+            marginLeft: 0,
+
         }
 
     },
@@ -168,12 +180,13 @@ export default makeStyles((theme) => ({
     },
 
     customButtons: {
-        width: "30%",
+        width: "25%",
         marginLeft: "auto",
         display: "flex",
         justifyContent: "space-evenly",
         [theme.breakpoints.down('sm')]: {
-            justifyContent: "space-between",
+            width: "0",
+            justifyContent: "flex-start",
         }
 
     }

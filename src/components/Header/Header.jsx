@@ -33,7 +33,7 @@ const Header = () => {
                 <div className={classes.mobile_component}>
                     <div className={classes.mobile_component_inner}>
                         <Link to='/' className={classes.logobtn}>
-                            <Typography variant="h5" style={{lineHeight:"0"}}>E cart</Typography>
+                            <Typography variant="h5" style={{lineHeight:"0", }}>E cart</Typography>
                         </Link>
                         <span className={classes.customButtons}><CustomButtons /></span>
                     </div>
