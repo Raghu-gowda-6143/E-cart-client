@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = process.env.REACT_APP_SERVER_API;
+const url = "https://raghu-ecart-server.herokuapp.com";
 
 
 //host URL
