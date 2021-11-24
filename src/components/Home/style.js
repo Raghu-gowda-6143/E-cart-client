@@ -57,7 +57,12 @@ export default makeStyles((theme) => ({
         marginLeft: 'auto',
         backgroundColor: '#0bb3b0',
         borderRadius: 2,
-        fontSize: 13
+        fontSize: 13,
+        [theme.breakpoints.down('md')]: {
+            width: "100px",
+            height: '40px',
+            textAlign: "center"
+        }
     },
     wrapper: {
         padding: '25px 15px',
