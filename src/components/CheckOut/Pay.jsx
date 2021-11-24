@@ -7,7 +7,7 @@ import useStyle from '../Product/style';
 import {api} from '../../services/api';
 
 
-const stripeKey = process.env.REACT_APP_PUBLIC_KEY;
+const stripeKey = process.env.REACT_APP_SERVER_PUBLIC_KEY;
 
 
 const Pay = ({cost, buttonName}) => {
@@ -46,10 +46,7 @@ const Pay = ({cost, buttonName}) => {
                 
             } catch (error) {
                 console.log(error);
-                history.push("/cancelled")
-
-
-                
+                history.push("/cancelled")  
             }
             
         };
